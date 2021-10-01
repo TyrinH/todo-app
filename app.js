@@ -15,9 +15,9 @@ const addTodo = (todo) => {
     const trashCan = document.createElement('span')
     todoData.append(todo);
     trashCan.innerHTML = '<i class="fas fa-trash-alt"></i>'
-    todoData.append(trashCan);
+    //todoData.append(trashCan);
     newTodoDiv.append(todoData);
-    newTodoDiv.append(trashCan)
+    newTodoDiv.append(trashCan);
     // bTag.append(todo);
   //  newTodo.append(bTag);
     storedTodos.append(newTodoDiv);
@@ -26,5 +26,12 @@ const addTodo = (todo) => {
 }
 
 storedTodos.addEventListener('click', function (e) {
-    e.target.nodeName === 'I' && storedTodos.remove();
+   const deletion = e.target;
+
+   if(deletion.nodeName === 'I'){
+       const todo = deletion.parentElement;
+       todo.remove();
+   }
+
+  
 })
