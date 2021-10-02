@@ -29,7 +29,7 @@ storedTodos.addEventListener('click', function (e) {
    const deletion = e.target;
 
    if(deletion.nodeName === 'I'){
-       const todo = deletion.parentElement;
+       const todo = deletion.parentElement.parentElement;
        todo.remove();
    }
 
