@@ -1,0 +1,9 @@
+h1, #todoForm {
+    padding-top: 3rem;
+    text-align: center;
+}
+
+#storedTodos {
+    text-align: center;
+    list-style: none;
+}
